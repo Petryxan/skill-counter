@@ -19,7 +19,7 @@ const initialState = {
   skill1: 0,
   skill2: 0,
   skill3: 0,
-  skill1Set: 6,
+  skill1Set: 0,
   skill2Set: 0,
   skill3Set: 0,
 };

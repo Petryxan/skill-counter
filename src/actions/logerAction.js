@@ -13,9 +13,12 @@ export const decrementAction = () => ({
   payload: 0,
 });
 
-export const setAction = (text) => ({
+export const setAction = (text, skill1Set) => ({
   type: SET,
   payload: text,
+  skill: skill1Set,
+  rnd: Math.floor(Math.random() * 100),
+  date: Date.now()
 });
 
 export const setCountAction = (textcount) => ({
@@ -26,6 +29,7 @@ export const setCountAction = (textcount) => ({
 export const setAction2 = (text2, skill1) => ({
   type: SET2,
   payload: text2,
-  skill1: skill1
+  skill1: skill1,
+  
 
 });

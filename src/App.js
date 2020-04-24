@@ -8,8 +8,9 @@ import {
   setCountAction,
   setAction2,
 } from "./actions/logerAction";
-import ListItem from './Componens/listItem'
-
+import ListItem from "./Componens/listItem";
+import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   state = {
@@ -25,11 +26,12 @@ class App extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.set(this.state.label);
+    this.props.set(this.state.label, this.props.main.skill1Set);
+
     this.setState({
       label: "",
     });
-    // this.props.setcount(this.props.counter.koli)
+   
   };
 
   OnChangeMy = (e) => {
@@ -40,20 +42,21 @@ class App extends Component {
   };
   onSubmitMy = (event) => {
     event.preventDefault();
-    this.props.set2(this.state.currentValue, this.props.main.skill1Set );
+    this.props.set2(this.state.currentValue, this.props.main.skill1Set);
     this.setState({ currentValue: "" });
-    console.log(this.props.main.skill1Set)
+    console.log(this.props.main.skill1Set);
   };
 
   render() {
-  
-    
-
     return (
       <div>
         <div>counter: </div>
+        <Button variant="outline-primary">Primary</Button>
+        {""}
         {this.props.counter.koli}
-        <button onClick={this.props.signIn}>ooo!!!!!!!!!</button>
+        <Button variant="outline-primary" onClick={this.props.signIn}>
+          ooo!!!!!!!!!
+        </Button>
 
         {this.props.logger.toString()}
         <div>
@@ -88,9 +91,8 @@ class App extends Component {
 
             <button>click me</button>
           </form>
-           {Date.now()}
-         <ListItem/>
-        
+          {Date.now()}
+          <ListItem />
         </div>
       </div>
     );
@@ -100,7 +102,7 @@ const mapStateToProps = (state) => {
   return {
     counter: state.counter,
     logger: state.logger,
-    main: state.main
+    main: state.main,
   };
 };
 
@@ -109,7 +111,7 @@ const mapDispatchToProps = (dispatch) => {
     signIn: () => dispatch(signIn()),
     incrementAction: () => dispatch(incrementAction()),
     decrementAction: () => dispatch(decrementAction()),
-    set: (text) => dispatch(setAction(text)),
+    set: (text, skill1Set) => dispatch(setAction(text, skill1Set)),
     set2: (text2) => dispatch(setAction2(text2)),
     setcount: (textcount) => dispatch(setCountAction(textcount)),
   };

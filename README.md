@@ -1,1 +1,1 @@
-# skill-counter
+# This App is React - Redux. My skill counter

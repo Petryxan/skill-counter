@@ -17,6 +17,7 @@ import {
   set2default,
   set3default,
 } from "../actions/mainAction";
+import Button from "react-bootstrap/Button";
 
 class Main extends Component {
   state = {
@@ -44,7 +45,7 @@ class Main extends Component {
         validate: false,
       });
     }
-    //
+    // Включає кнопку  Set
 
     if (this.props.main.skill1 > this.props.main.skill1Set) {
       this.setState({
@@ -75,6 +76,8 @@ class Main extends Component {
         validateSet3: true,
       });
     }
+
+    // Блокує кнопку  SET за умови що totalSkill <= 0
 
     if (this.props.main.totalSkill <= 0) {
       if (this.props.main.skill1 === this.props.main.skill1Set) {

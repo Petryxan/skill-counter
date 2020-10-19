@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Main from "./Componens/main";
 import { createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import rootreducers from "./reducers";
+import rootreducers from "./redux/reducers";
 import thunk from "redux-thunk";
 
 const composeEnhancers =

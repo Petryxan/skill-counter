@@ -7,7 +7,7 @@ import {
   setAction,
   setCountAction,
   setAction2,
-} from "./actions/logerAction";
+} from "./redux/actions/logerAction";
 import ListItem from "./Componens/listItem";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

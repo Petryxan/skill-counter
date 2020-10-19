@@ -18,3 +18,7 @@ export const SKIL2DEFAULT = "SKIL2DEFAULT"
 export const SKIL3DEFAULT = "SKIL3DEFAULT"
 export  const SETTOTAL = "SETTOTAL"
 
+export const ADDITEM = 'IDDITEM'
+export const ADD_NAME = 'ADD_NAME'
+
+

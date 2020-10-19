@@ -16,8 +16,9 @@ import {
   set1default,
   set2default,
   set3default,
-} from "../actions/mainAction";
-import Button from "react-bootstrap/Button";
+} from "../redux/actions/mainAction";
+//import Button from "react-bootstrap/Button";
+import TestHooks from "./testHooks";
 
 class Main extends Component {
   state = {
@@ -246,6 +247,9 @@ class Main extends Component {
               <button onClick={this.props.settotal}>Set + 5</button>
             </form>
           </div>
+        </div>
+        <div className={styles.app}>
+          <TestHooks />
         </div>
         <div className={styles.app}>
           <App />

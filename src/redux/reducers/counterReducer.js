@@ -5,6 +5,7 @@ const initialState = {
   koli: 2,
   mn: 100,
   foodList: [],
+  listItems: [],
   mas1: { aaa: "111", id: 1, title: "aaa" },
   mas2: { aaa: "222", id: 2, title: "bbb" },
   mas3: { aaa: "333", id: 3, title: "ccc" },

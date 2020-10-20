@@ -36,6 +36,8 @@ const TestHooks = () => {
         <button onClick={() => dispatch(addItem())}>
           Change state Redux + {list.toString()}
         </button>
+
+        <img src="https://picsum.photos/100/103"/>
       </span>
       <input onChange={() => setValue("Value changed")} value={value} />
       <button onClick={() => setData(!datas)}>Add + {datas.toString()}</button>
